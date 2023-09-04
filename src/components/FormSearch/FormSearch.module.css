@@ -1,0 +1,35 @@
+.form {
+  position: relative;
+  width: 100%;
+  max-width: 336px;
+  margin: 0 auto;
+  @media (width >= 1280px) {
+    max-width: 394px;
+  }
+}
+
+.input {
+  width: 100%;
+  padding-bottom: 5px;
+  border: none;
+  border-bottom: 1px solid var(--color-text);
+  background: transparent;
+  outline: none;
+  color: var(--color-text);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+}
+.input::placeholder {
+  color: var(--color-text);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+}
+.btnSearh {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: transparent;
+  border: none;
+}
