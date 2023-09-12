@@ -1,0 +1,11 @@
+.btn {
+  color: #fff;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
