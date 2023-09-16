@@ -1,6 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-const api_key = "5a2419fd63850feafab2665d44923974";
+const api_key = import.meta.env.VITE_TMDB_API_KEY;
 axios.defaults.baseURL = "https://api.themoviedb.org/3/";
 
 export const getMovies = createAsyncThunk(

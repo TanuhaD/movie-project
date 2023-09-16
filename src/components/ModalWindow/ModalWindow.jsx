@@ -4,8 +4,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { getMovieId } from "../../redux/operrations";
 import {
   selectModalWindowMovieInfo,
-  selectMoviesQueueToShow,
-  selectMoviesWatchedToShow,
   selectQueueIds,
   selectWatchedIds,
 } from "../../redux/selectors";
@@ -25,7 +23,7 @@ const body = document.querySelector("body");
 
 const ModalWindow = ({ handleCloseModal, id, genre_ids }) => {
   const queueId = useSelector(selectQueueIds);
-  const queue = useSelector(selectMoviesQueueToShow);
+  // const queue = useSelector(selectMoviesQueueToShow);
   const uid = useSelector(userUidSelector);
   const [isInQueue, setIsInQueue] = useState(
     queueId.some((movieInfo) => {
