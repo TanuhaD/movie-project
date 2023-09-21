@@ -4,7 +4,7 @@ import css from "./Card.module.css";
 import PropTypes from "prop-types";
 import ModalWindow from "../ModalWindow/ModalWindow";
 import clsx from "clsx";
-import bakcdropImage from "../../assets/imageDefault.jpg";
+import backdropImage from "../../assets/imageDefault.jpg";
 const Card = ({ poster_path, release_date, title, genre_ids, id }) => {
   const [openModal, setOpenModal] = useState(false);
 
@@ -36,7 +36,7 @@ const Card = ({ poster_path, release_date, title, genre_ids, id }) => {
           src={
             poster_path
               ? `https://image.tmdb.org/t/p/w500/${poster_path}`
-              : bakcdropImage
+              : backdropImage
           }
           alt="movie"
           className={css.image}
