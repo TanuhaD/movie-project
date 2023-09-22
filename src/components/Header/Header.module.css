@@ -5,6 +5,7 @@
   padding: 40px 20px 44px 20px;
   display: flex;
   flex-direction: column;
+
   background-image: url("../../assets/header/main-320@1x.jpg");
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
@@ -26,6 +27,7 @@
   }
   @media (width >= 1280px) {
     padding-top: 45px;
+    margin-bottom: 20px;
     background-image: url("../../assets/header/main-1280@1x.jpg");
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
@@ -45,9 +47,12 @@
   display: flex;
   align-items: center;
 }
-.logo {
+
+.logoWrp {
+  width: 24px;
+  height: 24px;
 }
-.logo:hover {
+.boxLogo:hover .logo {
   animation-name: spin;
   animation-duration: 3s;
   animation-iteration-count: infinite;
