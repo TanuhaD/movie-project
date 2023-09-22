@@ -21,7 +21,9 @@ const Header = () => {
     >
       <div className={css.wrapper}>
         <NavLink to="/" className={css.boxLogo}>
-          <Logo className={css.logo} />
+          <div className={css.logoWrp}>
+            <Logo className={css.logo} />
+          </div>
           <h1 className={css.title}>Filmoteka</h1>
         </NavLink>
         <nav className={css.wrapperNav}>
