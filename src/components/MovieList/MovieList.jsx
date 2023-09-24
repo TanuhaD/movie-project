@@ -5,6 +5,7 @@ import { selectPopularMovies, totalSelector } from "../../redux/selectors";
 import { useEffect, useState } from "react";
 import { getMovies } from "../../redux/operrations";
 import Pagination from "../Pagination/Pagination";
+import clsx from "clsx";
 const limit = 20;
 
 const MovieList = () => {
@@ -17,7 +18,7 @@ const MovieList = () => {
   }, [dispatch, page]);
 
   return (
-    <div className={css.container}>
+    <div className={clsx(css.container, "container")}>
       <ul className={css.list}>
         {movies.map(({ id, poster_path, release_date, title, genre_ids }) => (
           <Card
@@ -31,7 +32,13 @@ const MovieList = () => {
         ))}
       </ul>
       <div>
-        <Pagination total={total} page={page} setPage={setPage} limit={limit} />
+        <Pagination
+          total={total}
+          page={page}
+          setPage={setPage}
+          limit={limit}
+          maxPagesLimit={500}
+        />
       </div>
     </div>
   );
