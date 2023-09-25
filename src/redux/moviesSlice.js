@@ -45,6 +45,9 @@ const moviesSlice = createSlice({
         state.watchedIds = watched;
       }
     },
+    clearModalWindowMovieInfo: (state) => {
+      return { ...state, modalWindowMovieInfo: {} };
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -99,6 +102,7 @@ export const {
   removeMovieFromLibrary,
   addMovieToLibrary,
   writeLibraryFromFirestore,
+  clearModalWindowMovieInfo,
 } = moviesSlice.actions;
 
 export const moviesReducer = moviesSlice.reducer;
