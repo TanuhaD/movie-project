@@ -1,0 +1,9 @@
+.container {
+  margin-top: 25px;
+  overflow: hidden;
+  padding: 5px;
+}
+.list {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
