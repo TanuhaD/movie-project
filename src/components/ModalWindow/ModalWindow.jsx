@@ -170,59 +170,62 @@ const ModalWindow = ({ handleCloseModal, id, genre_ids }) => {
 
             <h3 className={css.titleAbout}>About</h3>
             <p className={css.overviewText}>{overview}</p>
-            <div className={css.wrapperBtn}>
-              <button
-                disabled={!userToken}
-                className={css.btn}
-                onClick={handleClickWatched}
-              >
-                {isInWatched ? "remove from watched" : "add to watched"}
-              </button>
 
-              <button
-                disabled={!userToken}
-                className={css.btn}
-                onClick={handleClickQueue}
-              >
-                {isInQueue ? "remove from queue" : "add to queue"}
-              </button>
-            </div>
-            {!userToken && (
-              <p className={css.textSingIngWarning}>
-                Please{" "}
+            <div className={css.boxBtnLink}>
+              <div className={css.wrapperBtn}>
                 <button
-                  type="submit"
-                  className={css.signInBtn}
-                  onClick={onSignIn}
+                  disabled={!userToken}
+                  className={css.btn}
+                  onClick={handleClickWatched}
                 >
-                  Sing in
-                </button>{" "}
-                to add the movie to your library!
-              </p>
-            )}
-            <div className={css.wrapperLink}>
-              <a
-                href={`https://www.google.com/search?q=${original_title} ${release_date.slice(
-                  0,
-                  4
-                )} смотреть онлайн бесплатно`}
-                target="_blank"
-                rel="noreferrer"
-                className={css.link}
-              >
-                Watch online
-              </a>
-              <a
-                href={`https://www.google.com/search?q=${original_title} ${release_date.slice(
-                  0,
-                  4
-                )} смотреть трейлер youtube`}
-                target="_blank"
-                rel="noreferrer"
-                className={css.link}
-              >
-                Watch trailer
-              </a>
+                  {isInWatched ? "remove from watched" : "add to watched"}
+                </button>
+
+                <button
+                  disabled={!userToken}
+                  className={css.btn}
+                  onClick={handleClickQueue}
+                >
+                  {isInQueue ? "remove from queue" : "add to queue"}
+                </button>
+              </div>
+              {!userToken && (
+                <p className={css.textSingIngWarning}>
+                  Please{" "}
+                  <button
+                    type="submit"
+                    className={css.signInBtn}
+                    onClick={onSignIn}
+                  >
+                    Sing in
+                  </button>{" "}
+                  to add the movie to your library!
+                </p>
+              )}
+              <div className={css.wrapperLink}>
+                <a
+                  href={`https://www.google.com/search?q=${original_title} ${release_date.slice(
+                    0,
+                    4
+                  )} смотреть онлайн бесплатно`}
+                  target="_blank"
+                  rel="noreferrer"
+                  className={css.link}
+                >
+                  Watch online
+                </a>
+                <a
+                  href={`https://www.google.com/search?q=${original_title} ${release_date.slice(
+                    0,
+                    4
+                  )} смотреть трейлер youtube`}
+                  target="_blank"
+                  rel="noreferrer"
+                  className={css.link}
+                >
+                  Watch trailer
+                </a>
+              </div>
             </div>
           </div>
         </div>
