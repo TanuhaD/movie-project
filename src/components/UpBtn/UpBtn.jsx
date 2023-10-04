@@ -1,7 +1,7 @@
-import { throttle } from "lodash";
 import { useEffect, useRef } from "react";
 import ArrowUpSvg from "./ArrowUpSvg";
 import css from "./UpBtn.module.css";
+import throttle from "lodash.throttle";
 
 const UpBtn = () => {
   const btnRef = useRef();
