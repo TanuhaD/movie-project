@@ -1,5 +1,6 @@
 .overlay {
   position: fixed;
+  z-index: 3;
   inset: 0;
   display: flex;
   justify-content: center;
@@ -181,6 +182,11 @@
   line-height: 20px; /* 166.667% */
   margin-bottom: 20px;
 }
+.boxBtnLink {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .wrapperBtn {
   display: flex;
   align-items: center;
@@ -273,5 +279,12 @@
     border: none;
     color: #fff;
     box-shadow: 5px 1px 52px 0px rgba(255, 107, 1, 0.9);
+  }
+  @media (width >= 768px) {
+    width: 125px;
+    height: 44px;
+  }
+  @media (width >= 1240px) {
+    width: 136px;
   }
 }
